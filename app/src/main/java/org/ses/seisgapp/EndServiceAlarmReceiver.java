@@ -30,6 +30,14 @@ public class EndServiceAlarmReceiver extends BroadcastReceiver {
         wakeLock.acquire();
     }
 
+    /**
+     * Method used to release the shared <code>WakeLock</code>.
+     */
+    public static synchronized void releaseLock(){
+        if (wakeLock != null){
+            wakeLock.release();
+        }
+    }
 
     /* (non-Javadoc)
      * @see android.content.BroadcastReceiver#onReceive(android.content.Context, android.content.Intent)
