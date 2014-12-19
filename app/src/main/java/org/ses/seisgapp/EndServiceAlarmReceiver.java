@@ -8,7 +8,7 @@ import android.util.Log;
 
 // make sure we use a WakefulBroadcastReceiver so that we acquire a partial wakelock
 public class EndServiceAlarmReceiver extends BroadcastReceiver {
-    private static final String TAG = "StartServiceAlarmReceiver";
+    private static final String TAG = "EndServiceAlarmReceiver";
     private static PowerManager.WakeLock wakeLock = null;
     private static final String LOCK_TAG = "org.ses.seisgapp";
 
